@@ -8,6 +8,7 @@ public class IndexController {
     }
 
     public String ooosHandler(){
-        return "notimplemented";
+        throw new ValueNotFoundException();
+//        return "";
     }
 }
