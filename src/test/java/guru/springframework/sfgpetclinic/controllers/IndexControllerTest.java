@@ -22,7 +22,7 @@ class IndexControllerTest {
 
     @Test
     void oupsHandler() {
-        assertTrue("notimplemented".equals(indexController.oupsHandler()), ()  -> "This is some  expensive" +
+        assertTrue("notimplemented".equals(indexController.ooosHandler()), ()  -> "This is some  expensive" +
                 " Message to build" +
                 " for this test");
     }
