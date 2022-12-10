@@ -3,6 +3,7 @@ package guru.springframework.sfgpetclinic.controllers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.*;
 
 import java.time.Duration;
 
@@ -47,5 +48,35 @@ class IndexControllerTest {
             Thread.sleep(2000);
             System.out.println("I got here promptly");
         });
+    }
+
+    @EnabledOnOs(OS.MAC)
+    @Test
+    void testOnMacOs() {
+
+    }
+
+    @EnabledOnOs(OS.WINDOWS)
+    @Test
+    void testOnWindowsOs() {
+
+    }
+
+    @EnabledOnJre(JRE.JAVA_8)
+    @Test
+    void testOnJava8() {
+
+    }
+
+    @EnabledOnJre(JRE.OTHER)
+    @Test
+    void testOnJava18() {
+
+    }
+
+    @EnabledIfEnvironmentVariable(named = "USER", matches="vimalnayak")
+    @Test
+    void testOnEnvironVariable() {
+
     }
 }
